@@ -3,6 +3,6 @@ import {
 } from './types';
 
 export const authenticate = isLoggedIn => ({
-  type: CHANGE_AUTH.
+  type: CHANGE_AUTH,
   payload: isLoggedIn
 })
