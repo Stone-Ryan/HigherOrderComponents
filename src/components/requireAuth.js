@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 export default function(ComposedCompnent) {
   class Authentication extends Component {
@@ -7,5 +8,9 @@ export default function(ComposedCompnent) {
     }
   }
 
-  return Authentication;
+  const mapStateToProps = state => ({
+    authenticated: state.authenticated
+  })
+
+  return connect(mapStateToProps)(Authentication);
 }
